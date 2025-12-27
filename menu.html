@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hatay Ocakbaşı Denizli - Menü</title>
+  <style>
+    :root{
+      --bg:#fff;
+      --accent:#b33a2e; /* marka rengi */
+      --text:#222;
+      --muted:#666;
+      --card:#fafafa;
+      --max-width:900px;
+    }
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;font-size:16px;color:var(--text);background:var(--bg);}
+    .container{max-width:var(--max-width);margin:24px auto;padding:20px;}
+    header{display:flex;gap:16px;align-items:center;border-bottom:4px solid var(--accent);padding-bottom:12px;margin-bottom:18px;}
+    .brand{display:flex;flex-direction:column;}
+    .brand h1{margin:0;font-size:28px;letter-spacing:0.5px;}
+    .brand p{margin:4px 0 0;color:var(--muted);}
+    .meta{margin-left:auto;text-align:right;font-size:14px;color:var(--muted);}
+    .logo{width:86px;height:86px;border-radius:8px;background:linear-gradient(135deg,#fff,#eee);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);border:2px solid #eee;}
+    .tag{display:inline-block;background:var(--accent);color:#fff;padding:4px 8px;border-radius:6px;font-size:13px;margin-top:8px;}
+    nav.sections{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 22px;}
+    nav.sections a{background:var(--card);padding:6px 10px;border-radius:6px;color:var(--accent);text-decoration:none;border:1px solid #eee;font-size:14px;}
+    section{margin-bottom:22px;}
+    h2{margin:6px 0 12px;color:var(--accent);font-size:20px;border-bottom:1px dashed #eee;padding-bottom:8px;}
+    .grid{display:grid;grid-template-columns:1fr 90px;gap:8px 18px;align-items:center;}
+    .item{padding:6px 0;border-bottom:1px solid #f2f2f2;}
+    .item .name{font-weight:600;}
+    .item .desc{font-size:13px;color:var(--muted);margin-top:4px;}
+    .price{text-align:right;font-weight:700;}
+    .note{font-size:13px;color:var(--muted);margin-top:8px;}
+    .footer{border-top:1px solid #eee;padding-top:12px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+    .small{font-size:13px;color:var(--muted);}
+    .badge{display:inline-block;background:#eee;padding:3px 6px;border-radius:6px;font-size:12px;margin-left:6px;}
+    /*print*/
+    @media print{
+      body{background:#fff;color:#000}
+      header nav, .tag, .meta, nav.sections, .footer .actions{display:none}
+      .container{max-width:100%;padding:0}
+      .logo{border:0}
+    }
+    /*responsive*/
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr 78px}
+      header{flex-direction:column;align-items:flex-start;gap:10px}
+      .meta{text-align:left;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo" aria-hidden="true">HO</div>
+      <div class="brand">
+        <h1>Hatay Ocakbaşı Denizli</h1>
+        <p>Gerçek Hatay lezzeti — Sıcak ocakbaşından sofranıza</p>
+        <span class="tag">Günlük taze malzeme</span>
+      </div>
+      <div class="meta">
+        <div><strong>Adres:</strong> Denizli, (Mahalle / Cadde giriniz)</div>
+        <div><strong>Telefon:</strong> 0 (5xx) xxx xx xx</div>
+        <div><strong>Çalışma:</strong> 12:00 — 23:30</div>
+      </div>
+    </header>
+
+    <nav class="sections" aria-label="Menü bölümleri">
+      <a href="#mezeler">Mezeler</a>
+      <a href="#ara-sicaklar">Ara Sıcaklar</a>
+      <a href="#ana-yemekler">Ana Yemekler</a>
+      <a href="#pide">Pide & Lahmacun</a>
+      <a href="#yan">Yan Lezzetler</a>
+      <a href="#tatlilar">Tatlılar</a>
+      <a href="#icecekler">İçecekler</a>
+    </nav>
+
+    <section id="mezeler">
+      <h2>Mezeler</h2>
+      <div class="grid">
+        <div class="item">
+          <div class="name">Zahter Salatası <span class="badge">(V)</span></div>
+          <div class="desc">Taze zahter, domates, maydanoz ve limon</div>
+        </div>
+        <div class="price">45 ₺</div>
+
+        <div class="item">
+          <div class="name">Humus <span class="badge">(V)</span></div>
+          <div class="desc">Nohut püresi, tahin, zeytinyağı</div>
+        </div>
+        <div class="price">35 ₺</div>
+
+        <div class="item">
+          <div class="name">Gavurdağı Salatası</div>
+          <div class="desc">Domates, salatalık, ceviz, nar ekşisi</div>
+        </div>
+        <div class="price">40 ₺</div>
+
+        <div class="item">
+          <div class="name">Acılı Ezme</div>
+          <div class="desc">Yerel acı biber, domates ve zeytinyağı</div>
+        </div>
+        <div class="price">30 ₺</div>
+      </div>
+    </section>
+
+    <section id="ara-sicaklar">
+      <h2>Ara Sıcaklar</h2>
+      <div class="grid">
+        <div class="item">
+          <div class="name">Sigara Böreği (5 adet)</div>
+          <div class="desc">Peynirli ve çıtır</div>
+        </div>
+        <div class="price">38 ₺</div>
+
+        <div class="item">
+          <div class="name">İçli Köfte (2 adet)</div>
+          <div class="desc">Ev usulü içli köfte</div>
+        </div>
+        <div class="price">55 ₺</div>
+
+        <div class="item">
+          <div class="name">Sucuk Tava</div>
+          <div class="desc">Soslu sucuk, tereyağında</div>
+        </div>
+        <div class="price">48 ₺</div>
+      </div>
+    </section>
+
+    <section id="ana-yemekler">
+      <h2>Ana Yemekler</h2>
+      <div class="grid">
+        <div class="item">
+          <div class="name">Adana Kebabı (200 g)</div>
+          <div class="desc">Kendi usulümüzün acılı Adana kebabı</div>
+        </div>
+        <div class="price">125 ₺</div>
+
+        <div class="item">
+          <div class="name">Urfa Kebabı (200 g)</div>
+          <div class="desc">Baharsız, yumuşak kıyma</div>
+        </div>
+        <div class="price">115 ₺</div>
+
+        <div class="item">
+          <div class="name">Kuşbaşı Ocakbaşı (300 g)</div>
+          <div class="desc">Özel marine, közde pişmiş</div>
+        </div>
+        <div class="price">165 ₺</div>
+
+        <div class="item">
+          <div class="name">Tavuk Şiş</div>
+          <div class="desc">Izgarada, lezzetli marine</div>
+        </div>
+        <div class="price">95 ₺</div>
+
+        <div class="item">
+          <div class="name">Sebzeli Güveç <span class="badge">(V)</span></div>
+          <div class="desc">Fırında mevsim sebzeleri</div>
+        </div>
+        <div class="price">85 ₺</div>
+      </div>
+    </section>
+
+    <section id="pide">
+      <h2>Pide & Lahmacun</h2>
+      <div class="grid">
+        <div class="item">
+          <div class="name">Lahmacun (tek)</div>
+        </div>
+        <div class="price">28 ₺</div>
+
+        <div class="item">
+          <div class="name">Kaşarlı Pide</div>
+        </div>
+        <div class="price">55 ₺</div>
+
+        <div class="item">
+          <div class="name">Etli Pide</div>
+        </div>
+        <div class="price">60 ₺</div>
+      </div>
+    </section>
+
+    <section id="yan">
+      <h2>Yan Lezzetler</h2>
+      <div class="grid">
+        <div class="item">
+          <div class="name">Pilav</div>
+        </div>
+        <div class="price">20 ₺</div>
+
+        <div class="item">
+          <div class="name">Patlıcan Salatası <span class="badge">(V)</span></div>
+        </div>
+        <div class="price">30 ₺</div>
+
+        <div class="item">
+          <div class="name">Taze Lavaş</div>
+        </div>
+        <div class="price">5 ₺</div>
+      </div>
+    </section>
+
+    <section id="tatlilar">
+      <h2>Tatlılar</h2>
+      <div class="grid">
+        <div class="item">
+          <div class="name">Künefe (tek porsiyon)</div>
+          <div class="desc">Hatay usulü taze peynirle</div>
+        </div>
+        <div class="price">65 ₺</div>
+
+        <div class="item">
+          <div class="name">Sütlaç</div>
+        </div>
+        <div class="price">30 ₺</div>
+      </div>
+    </section>
+
+    <section id="icecekler">
+      <h2>İçecekler</h2>
+      <div class="grid">
+        <div class="item">
+          <div class="name">Ayran</div>
+        </div>
+        <div class="price">12 ₺</div>
+
+        <div class="item">
+          <div class="name">Şalgam (büyük)</div>
+        </div>
+        <div class="price">18 ₺</div>
+
+        <div class="item">
+          <div class="name">Yerli Şarap (kadeh)</div>
+        </div>
+        <div class="price">55 ₺</div>
+
+        <div class="item">
+          <div class="name">Çay</div>
+        </div>
+        <div class="price">10 ₺</div>
+
+        <div class="item">
+          <div class="name">Türk Kahvesi</div>
+        </div>
+        <div class="price">22 ₺</div>
+      </div>
+      <p class="note">(V) = Vejetaryen uygun. Tüm fiyatlar Türk Lirası (₺). Alerjen ve paket servis bilgisi için lütfen telefonla iletişime geçiniz.</p>
+    </section>
+
+    <div class="footer">
+      <div class="small">Rezervasyon: 0 (5xx) xxx xx xx • Adres: Denizli, Mah./Cadde • Çalışma: 12:00–23:30</div>
+      <div class="small">Sosyal: @hatayocakbasidenizli • Paket servis ve catering mevcut</div>
+    </div>
+  </div>
+</body>
+</html>
